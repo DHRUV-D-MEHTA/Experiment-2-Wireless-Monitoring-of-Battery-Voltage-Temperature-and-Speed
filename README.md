@@ -25,10 +25,58 @@ o	Display the data using real-time plots.
  
 ## Program:
 
+## MATLAB CODE
 
+```matlab
+clear; clc; close all;
+
+t = linspace(0,10,100);
+
+v = 48 + 2*sin(t);
+temp = 30 + 5*sin(0.5*t);
+spd = 40 + 20*sin(0.3*t);
+
+subplot(3,1,1);
+plot(t,v,'b','LineWidth',2);
+title('Battery Voltage Monitoring');
+xlabel('Time (s)');
+ylabel('Voltage (V)');
+grid on;
+
+subplot(3,1,2);
+plot(t,temp,'r','LineWidth',2);
+title('Temperature Monitoring');
+xlabel('Time (s)');
+ylabel('Temperature (°C)');
+grid on;
+
+subplot(3,1,3);
+plot(t,spd,'g','LineWidth',2);
+title('Speed Monitoring');
+xlabel('Time (s)');
+ylabel('Speed (km/h)');
+grid on;
+
+disp('Data Monitoring Complete.');
+```
+
+## OUTPUT
+
+The MATLAB simulation displays three graphs:
+
+1. Battery Voltage Monitoring
+2. Temperature Monitoring
+3. Speed Monitoring
+
+The Command Window displays:
+
+```text
+Data Monitoring Complete.
+```
 
 
 ## Output:
+<img width="1917" height="1016" alt="image" src="https://github.com/user-attachments/assets/49af650d-d07d-4097-9b21-40f31d06f58e" />
 
 
  
